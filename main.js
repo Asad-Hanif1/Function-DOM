@@ -1,20 +1,73 @@
 // console.log('hello world');
 
 
-var head = document.querySelector('.head');
-var paragraph = document.querySelector("#para");
-console.log(paragraph.innerHTML)
 
-function changeText(){
+function calculateGrade() {
+        var subject1 = parseInt(document.getElementById('subject1').value);
+        var subject2 = parseInt(document.getElementById('subject2').value);
+        var subject3 = parseInt(document.getElementById('subject3').value);
+        var subject4 = parseInt(document.getElementById('subject4').value);
+    
+        var totalMarks = subject1 + subject2 + subject3 + subject4;
+        var percentage = (totalMarks / 400) * 100;
+        var grade = '';
+    
+        if (percentage >= 90) {
+          grade = 'A';
+        } else if (percentage >= 80) {
+          grade = 'B';
+        } else if (percentage >= 70) {
+          grade = 'C';
+        } else if (percentage >= 60) {
+          grade = 'D';
+        } else {
+          grade = 'F';
+        }
+    
+        var resultElement = document.getElementById('result');
+        resultElement.innerHTML = 'Obtained Marks: ' + totalMarks + '<br>' +
+                                   'Percentage: ' + percentage.toFixed(2) + '%<br>' +
+                                   'Grade: ' + grade;
+      }
 
-    if(paragraph.innerHTML === 'changed through js' && head.innerHTML === 'changed through js'){
-        paragraph.innerHTML = 'lorem ipsum';
-        head.innerHTML = 'hello world'
-    }else{
-        paragraph.innerHTML = 'changed through js'
-        head.innerHTML = 'changed through js'
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var head = document.querySelector('.head');
+// var paragraph = document.querySelector("#para");
+// console.log(paragraph.innerHTML)
+
+// function changeText(){
+
+//     if(paragraph.innerHTML === 'changed through js' && head.innerHTML === 'changed through js'){
+//         paragraph.innerHTML = 'lorem ipsum';
+//         head.innerHTML = 'hello world'
+//     }else{
+//         paragraph.innerHTML = 'changed through js'
+//         head.innerHTML = 'changed through js'
+//     }
+// }
 
 
 

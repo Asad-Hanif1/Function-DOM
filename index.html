@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Functions</title>
 </head>
 <body>
@@ -11,13 +12,35 @@
     <p id="para">lorem ipsum</p>
 
     <button onclick="changeText()">click me!</button> -->
-
+<!-- 
     <h1 class="head">Hello world</h1>
     <button onclick="greetUser()">click</button>
 
     <input class="input" type="text" placeholder="enter text" >
-    <button onclick="getInputValue()">click</button>
+    <button onclick="getInputValue()">click</button> -->
 
+<div id="head-1">
+    <form id="gradeForm">
+        <label for="subject1">Subject 1 Marks:</label><br>
+        <input type="number" id="subject1" name="subject1" min="" max="100" required><br>
+    
+        <label for="subject2">Subject 2 Marks:</label><br>
+        <input type="number" id="subject2" name="subject2" min="" max="100" required><br>
+    
+        <label for="subject3">Subject 3 Marks:</label><br>
+        <input type="number" id="subject3" name="subject3" min="" max="100" required><br>
+    
+        <label for="subject4">Subject 4 Marks:</label><br>
+        <input type="number" id="subject4" name="subject4" min="" max="100" required><br>
+    
+        <button type="button" onclick="calculateGrade()">Calculate Grade</button>
+      </form>
+    
+      <div id="result"></div>
+
+</div>
+
+    
     <script src="./main.js"></script>
 </body>
 </html>
