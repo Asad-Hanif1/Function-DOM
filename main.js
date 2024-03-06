@@ -2,33 +2,162 @@
 
 
 
-function calculateGrade() {
-        var subject1 = parseInt(document.getElementById('subject1').value);
-        var subject2 = parseInt(document.getElementById('subject2').value);
-        var subject3 = parseInt(document.getElementById('subject3').value);
-        var subject4 = parseInt(document.getElementById('subject4').value);
+// var input = document.querySelector('#input');
+// console.log(input.value);
+
+// function getValue (){
+//     input.value = ''
+//     console.log(input.value);
+// }
+
+
+var chemMarks = document.querySelector('#chem-marks')
+var phyMarks = document.querySelector('#phy-marks')
+var mathMarks = document.querySelector('#math-marks')
+var comMarks = document.querySelector('#com-marks')
+var studentTotal = document.querySelector('#total-marks')
+var percentage = document.querySelector('#percentage')
+var grade = document.querySelector('#grade')
+
+
+function calculatePercentage() {
+    console.log(chemMarks.value);
+    console.log(phyMarks.value);
+    console.log(mathMarks.value);
+    console.log(comMarks.value);
+
+    var totalMarks = 400;
+    var obtainedMarks = +chemMarks.value + +phyMarks.value + +mathMarks.value + +comMarks.value;
+    console.log('obtained marks ===>', obtainedMarks);
+    studentTotal.innerHTML = obtainedMarks;
+
+    var studentPercentage = obtainedMarks / totalMarks * 100;
+    percentage.innerHTML = studentPercentage;
+
+
+    if(studentPercentage > 80){
+        grade.innerHTML = 'A+'
+    }else if(studentPercentage > 70){
+        grade.innerHTML = 'A'
+    } else if(studentPercentage > 60){
+        grade.innerHTML = 'B'
+    }else{
+        grade.innerHTML = 'FAIL'
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var chemistry = document.querySelector('#chem-marks');
+//          var physics   = document.querySelector('#phy-marks');
+//          var math      = document.querySelector('#math-marks');
+//          var computer  = document.querySelector('#com-marks');
+//          var tot = document.querySelector('#total-marks');
+//          var student = document.querySelector('#student-percentage');
+//          var Grade = document.querySelector('#grade');
+
+//             function calculate (){
+//                 console.log(chemistry.value);
+//                 console.log(physics.value);
+//                 console.log(math.value);
+//                 console.log(computer.value);
+//                 var totalmarks = 400;
+//      var Obtainedmarks =  +chemistry.value + +physics.value + +math.value + +computer.value;
+//      console.log( "obtainedmarks ====> " , Obtainedmarks);
+//      tot.innerHTML = Obtainedmarks;
+//      var studentpercentage =   Obtainedmarks / totalmarks * 100 ;
+//      console.log("percetage ====>" , studentpercentage)
+//      student.innerHTML = studentpercentage;
+     
+//                         if(studentpercentage>90){
+//                             console.log(Grade.innerHTML= "A")
+//                         }else if(studentpercentage>70){
+//                             console.log(Grade.innerHTML="A")
+//                         }else if(studentpercentage>60){
+//                             console.log(Grade.innerHTML="B")
+//                         }else{
+//                             console.log(Grade.innerHTML="fail")
+//                         }
+//             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function calculateGrade() {
+//         var subject1 = parseInt(document.getElementById('subject1').value);
+//         var subject2 = parseInt(document.getElementById('subject2').value);
+//         var subject3 = parseInt(document.getElementById('subject3').value);
+//         var subject4 = parseInt(document.getElementById('subject4').value);
     
-        var totalMarks = subject1 + subject2 + subject3 + subject4;
-        var percentage = (totalMarks / 400) * 100;
-        var grade = '';
+//         var totalMarks = subject1 + subject2 + subject3 + subject4;
+//         var percentage = (totalMarks / 400) * 100;
+//         var grade = '';
     
-        if (percentage >= 90) {
-          grade = 'A';
-        } else if (percentage >= 80) {
-          grade = 'B';
-        } else if (percentage >= 70) {
-          grade = 'C';
-        } else if (percentage >= 60) {
-          grade = 'D';
-        } else {
-          grade = 'F';
-        }
+//         if (percentage >= 90) {
+//           grade = 'A';
+//         } else if (percentage >= 80) {
+//           grade = 'B';
+//         } else if (percentage >= 70) {
+//           grade = 'C';
+//         } else if (percentage >= 60) {
+//           grade = 'D';
+//         } else {
+//           grade = 'F';
+//         }
     
-        var resultElement = document.getElementById('result');
-        resultElement.innerHTML = 'Obtained Marks: ' + totalMarks + '<br>' +
-                                   'Percentage: ' + percentage.toFixed(2) + '%<br>' +
-                                   'Grade: ' + grade;
-      }
+//         var resultElement = document.getElementById('result');
+//         resultElement.innerHTML = 'Obtained Marks: ' + totalMarks + '<br>' +
+//                                    'Percentage: ' + percentage.toFixed(2) + '%<br>' +
+//                                    'Grade: ' + grade;
+//       }
 
 
 
